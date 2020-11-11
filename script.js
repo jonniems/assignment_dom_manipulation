@@ -12,7 +12,9 @@ btnAnimals.forEach(function (button) {
 const btnRemoveFirst = document.getElementById('remove-first-item-button');
 btnRemoveFirst.addEventListener('click', removeFirst = () => {
     const firstAnimal = spottedAnimalList.getElementsByTagName('li')[0];
-    spottedAnimalList.removeChild(firstAnimal);
+    if (firstAnimal) {
+        spottedAnimalList.removeChild(firstAnimal);
+    }
 });
 
 const btnRemoveAll = document.querySelector('#remove-all-button');
